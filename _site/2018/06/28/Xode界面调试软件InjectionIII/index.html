@@ -10,9 +10,9 @@
     <meta name="keyword"  content="">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>你好，世界 - SenLan的博客 | SenLanBlog</title>
+    <title>Xode界面调试软件InjectionIII - SenLan的博客 | SenLanBlog</title>
 
-    <link rel="canonical" href="https://senlan.github.io/2018/06/28/hello-2018/">
+    <link rel="canonical" href="https://senlan.github.io/2018/06/28/Xode%E7%95%8C%E9%9D%A2%E8%B0%83%E8%AF%95%E8%BD%AF%E4%BB%B6InjectionIII/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -133,10 +133,10 @@
                     <div class="tags">
                         
                     </div>
-                    <h1>你好，世界</h1>
+                    <h1>Xode界面调试软件InjectionIII</h1>
                     
                     
-                    <h2 class="subheading">第一个blog</h2>
+                    <h2 class="subheading"></h2>
                     
                     <span class="meta">Posted by Senlan on June 28, 2018</span>
                 </div>
@@ -156,8 +156,36 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-				<h1 id="你好世界">你好，世界！</h1>
-<p>这是我的第一篇博客的文章</p>
+				<!--#  Xode界面调试软件InjectionIII-->
+
+<p>优化Xcode开发时的速度，可以在不用编译的情况下看到代码的效果。先提供一下几个地址：
+<a href="http://johnholdsworth.com/injection.html">Injection链接</a>
+<a href="https://itunes.apple.com/us/app/injectioniii/id1380446739?ls=1&amp;mt=12">Mac App Store下载地址</a>
+<a href="http://www.cocoachina.com/ios/20180613/23780.html">Injection：iOS热重载背后的黑魔法</a>
+<a href="http://johnholdsworth.com/injection.html">参考文章:Injection III, the App  </a>
+1、在AppDelegate的didFinishLaunchingWithOptions方法里添加一下代码</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if DEBUG
+Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/iOSInjection.bundle")?.load()
+//for tvOS:
+Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/tvOSInjection.bundle")?.load()
+//Or for macOS:
+Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/macOSInjection.bundle")?.load()
+endif
+</code></pre></div></div>
+<p>2、在需要调试的controller上添加一下方法</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@objc func injected() {
+print("I've been injected: \(self)")
+self.reloadInjected()
+}
+</code></pre></div></div>
+<p><strong>注意事项：
+在swift3.0 后，Xcode编译做了优化，使用了Whole-Module Optimization（全模块优化，以下简称 WMO），需要禁用WMO，才能运行成功</strong>
+设置步骤：Targets–&gt;Build Setting–&gt;Compilation Mode–&gt;Single File
+<img src="https://upload-images.jianshu.io/upload_images/1463975-c9559ec18262c840.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png" /></p>
+
+<p>【那WMO是什么呢？
+补充：Whole-Module Optimization（全模块优化，以下简称 WMO），即在编译项目时，将同属于一个 Module（可以理解为一个 Target、一个 Package）的所有源代码都串起来，进行整体的一个分析与优化，区别于 Single-File Optimization（单文件优化，以下简称 SFO），WMO 可以更好的统筹全局，去 inline 函数调用、排除死函数（即写了却从不调用的函数）等等，大幅优化最终目标文件，使性能提升 2~5 倍。参考：<a href="https://news.cnblogs.com/n/555739/">评测Swift 3.0项目编译优化选项对编译速度的影响</a>
+】</p>
 
 
 
@@ -168,14 +196,16 @@
                 </style>
                 <div class="ds-share"
                     style="text-align: right"
-                    data-thread-key="/2018/06/28/hello-2018"
-                    data-title="你好，世界"
-                    data-url="https://senlan.github.io/2018/06/28/hello-2018/"
+                    data-thread-key="/2018/06/28/Xode界面调试软件InjectionIII"
+                    data-title="Xode界面调试软件InjectionIII"
+                    data-url="https://senlan.github.io/2018/06/28/Xode%E7%95%8C%E9%9D%A2%E8%B0%83%E8%AF%95%E8%BD%AF%E4%BB%B6InjectionIII/"
                     data-images="https://senlan.github.io/img/post-bg-js-version.jpg"
-                    data-content="你好，世界！
-这是我的第一篇博客的文章
+                    data-content="
 
- | SenLan的博客 | SenLanBlog " >
+优化Xcode开发时的速度，可以在不用编译的情况下看到代码的效果。先提供一下几个地址：
+Injection链接
+Mac App Store下载地址
+I... | SenLan的博客 | SenLanBlog " >
                     <div class="ds-share-inline">
                       <ul  class="ds-share-icons-16">
                         <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
@@ -194,10 +224,10 @@
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2018/06/28/Xode%E7%95%8C%E9%9D%A2%E8%B0%83%E8%AF%95%E8%BD%AF%E4%BB%B6InjectionIII/" data-toggle="tooltip" data-placement="top" title="Xode界面调试软件InjectionIII">&larr; Previous Post</a>
-                    </li>
                     
+                    <li class="next">
+                        <a href="/2018/06/28/hello-2018/" data-toggle="tooltip" data-placement="top" title="你好，世界">Next Post &rarr;</a>
+                    </li>
                     
                 </ul>
 
@@ -206,9 +236,9 @@
                 <!-- 多说评论框 start -->
                 <div class="comment">
                     <div class="ds-thread"
-                        data-thread-key="/2018/06/28/hello-2018"
-                        data-title="你好，世界"
-                        data-url="https://senlan.github.io/2018/06/28/hello-2018/" >
+                        data-thread-key="/2018/06/28/Xode界面调试软件InjectionIII"
+                        data-title="Xode界面调试软件InjectionIII"
+                        data-url="https://senlan.github.io/2018/06/28/Xode%E7%95%8C%E9%9D%A2%E8%B0%83%E8%AF%95%E8%BD%AF%E4%BB%B6InjectionIII/" >
                     </div>
                 </div>
                 <!-- 多说评论框 end -->
