@@ -10,9 +10,9 @@
     <meta name="keyword"  content="">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>你好，世界 - SenLan的博客 | SenLanBlog</title>
+    <title>第一个Blog - SenLan的博客 | SenLanBlog</title>
 
-    <link rel="canonical" href="https://senlan.github.io/2018/06/28/hello-2018/">
+    <link rel="canonical" href="http://localhost:4000/2018/06/28/hello-2018/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -117,12 +117,12 @@
 
     <!-- Image to hack wechat -->
 <!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
-<!-- <img src="/img/post-bg-js-version.jpg" width="0" height="0"> -->
+<!-- <img src="/img/post_bg.jpg" width="0" height="0"> -->
 
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header{
-        background-image: url('/img/post-bg-js-version.jpg')
+        background-image: url('/img/post_bg.jpg')
     }
 </style>
 <header class="intro-header" >
@@ -133,10 +133,10 @@
                     <div class="tags">
                         
                     </div>
-                    <h1>你好，世界</h1>
+                    <h1>第一个Blog</h1>
                     
                     
-                    <h2 class="subheading">第一个blog</h2>
+                    <h2 class="subheading">关于搭建github.io博客的记录</h2>
                     
                     <span class="meta">Posted by Senlan on June 28, 2018</span>
                 </div>
@@ -156,9 +156,23 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-				<h1 id="你好世界">你好，世界！</h1>
-<p>这是我的第一篇博客的文章</p>
+				<p>这是创建blog的第一篇文章， 关于搭建github.io博客的记录，使用Jeckll建站工具。</p>
 
+<p><strong>一、安装Jeckll</strong>
+        Jeckll的GitHub地址：https://github.com/jekyll/jekyll
+        Jeckll中文文档地址：http://jekyllcn.com
+        Jeckll英文文档地址：https://jekyllrb.com
+        使用gem install bundler jekyll命令安装过程中，遇到一个问题
+        <img src="/img/in_post/first_blog/question.png" alt="java-javascript" />
+        <small class="img-hint">问题截图</small>
+        遇到这个问题参考：https://jekyllrb.com/docs/troubleshooting/#no-sudo
+        在.bashrc的后面插入下面语句：
+        <img src="/img/in_post/first_blog/bashrc.png" alt="java-javascript" />
+        <small class="img-hint">插入的语句</small>
+        因为.bashrc文件是只读的，需要先修改文件的属性，前往文件/etc，找到bashrc文件，修改器读写属性。然后在命令行终端输入vim /etc/bashrc命令编辑文件，输入i就可以编辑，完成后按esc键，然后输入:wq保存退出。</p>
+
+<p><strong>二、编辑博客文章</strong>
+        Jeckll的格式要求为：yyyy-mm-dd-title.md，title的最好能使用英文，因为使用中文命名会导致本地预览是找不到对应的文件。本地服务器预览的命令为：jekyll serve</p>
 
 
                 <hr>
@@ -169,13 +183,13 @@
                 <div class="ds-share"
                     style="text-align: right"
                     data-thread-key="/2018/06/28/hello-2018"
-                    data-title="你好，世界"
-                    data-url="https://senlan.github.io/2018/06/28/hello-2018/"
-                    data-images="https://senlan.github.io/img/post-bg-js-version.jpg"
-                    data-content="你好，世界！
-这是我的第一篇博客的文章
+                    data-title="第一个Blog"
+                    data-url="http://localhost:4000/2018/06/28/hello-2018/"
+                    data-images="http://localhost:4000/img/post_bg.jpg"
+                    data-content="这是创建blog的第一篇文章， 关于搭建github.io博客的记录，使用Jeckll建站工具。
 
- | SenLan的博客 | SenLanBlog " >
+一、安装Jeckll
+        Jeckll的G... | SenLan的博客 | SenLanBlog " >
                     <div class="ds-share-inline">
                       <ul  class="ds-share-icons-16">
                         <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
@@ -194,10 +208,10 @@
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2018/06/28/Xode%E7%95%8C%E9%9D%A2%E8%B0%83%E8%AF%95%E8%BD%AF%E4%BB%B6InjectionIII/" data-toggle="tooltip" data-placement="top" title="Xode界面调试软件InjectionIII">&larr; Previous Post</a>
-                    </li>
                     
+                    <li class="next">
+                        <a href="/2018/06/29/InjectionIII/" data-toggle="tooltip" data-placement="top" title="Xode界面调试软件InjectionIII">Next Post &rarr;</a>
+                    </li>
                     
                 </ul>
 
@@ -207,8 +221,8 @@
                 <div class="comment">
                     <div class="ds-thread"
                         data-thread-key="/2018/06/28/hello-2018"
-                        data-title="你好，世界"
-                        data-url="https://senlan.github.io/2018/06/28/hello-2018/" >
+                        data-title="第一个Blog"
+                        data-url="http://localhost:4000/2018/06/28/hello-2018/" >
                     </div>
                 </div>
                 <!-- 多说评论框 end -->

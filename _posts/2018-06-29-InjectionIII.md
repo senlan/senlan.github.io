@@ -1,11 +1,10 @@
 ---
 layout: post
 title: "Xode界面调试软件InjectionIII"
-date:       2018-06-28
+date:       2018-06-29
 author:     "Senlan"
-header-img: "img/post-bg-js-version.jpg"
+header-img: "img/post_bg.jpg"
 ---
-<!--#  Xode界面调试软件InjectionIII-->
 
 优化Xcode开发时的速度，可以在不用编译的情况下看到代码的效果。先提供一下几个地址：
 [Injection链接](http://johnholdsworth.com/injection.html)
@@ -37,4 +36,5 @@ self.reloadInjected()
 【那WMO是什么呢？
 补充：Whole-Module Optimization（全模块优化，以下简称 WMO），即在编译项目时，将同属于一个 Module（可以理解为一个 Target、一个 Package）的所有源代码都串起来，进行整体的一个分析与优化，区别于 Single-File Optimization（单文件优化，以下简称 SFO），WMO 可以更好的统筹全局，去 inline 函数调用、排除死函数（即写了却从不调用的函数）等等，大幅优化最终目标文件，使性能提升 2~5 倍。参考：[评测Swift 3.0项目编译优化选项对编译速度的影响](https://news.cnblogs.com/n/555739/)
 】
+
 
